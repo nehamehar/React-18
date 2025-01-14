@@ -1,9 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(  // render is method
-  <StrictMode>   
-    <App />      
-  </StrictMode>, //strictmode is some paert we can remove that 
+function MyApp(){
+  return (<h1>hi my name</h1>)
+}
+
+// this is syntax error
+/*const ReactEle = {
+  type: "a",  //tags
+  props :{    
+      href: "https://github.com/samyak1409",
+      target:"blank"
+  },
+  childrean :"click me"
+}*/
+
+const reactEle = React.createElement(
+ "a",
+  {href: "https://github.com/samyak1409",target:"_blank"},
+  "click me" // children 
+  )
+
+ReactDOM.createRoot(document.getElementById('root')).render // render is method
+(
+  reactEle
 )

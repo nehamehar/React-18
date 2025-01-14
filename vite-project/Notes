@@ -1,0 +1,62 @@
+// react element 
+// const element = <h1>HI <h1/>
+// 
+// jsx means javascript+html
+
+
+// this is tree structure of react element
+// this is how react see eevry create element
+ const reactele = {
+    type: "a",  tags
+    props:{    
+        href: "https://google",
+        target:"blank"
+    },
+    childrean :"click me"
+}
+// or const element = react.createelement("h1",null,"hello")
+// customreact (reactele, mainContainer)
+
+
+
+// type ---- props ---- childrean
+/* these are 3 property of react 
+type: it is in string representing html tags
+like --- <h1></h1> button
+const element = <div>Hello</div>;
+console.log(element.type); // "div"
+
+
+with react componet:
+function MyComponent() {
+    return <h1>My Component</h1>;
+  }
+  
+  const element = <MyComponent />;
+  console.log(element.type); // MyComponent (the function component itself)
+
+  
+
+props:
+it hold all atribuute property paassed to element
+these are input you pass into component to modify
+
+for dom it contain htmlatribute --classname , style, id etc
+for react - it contain data to transfer from parent to Children
+
+const element = <div className="my-class">Hello</div>;
+console.log(element.props); // { className: "my-class", children: "Hello" }
+
+function MyComponent(props) {
+    return <h1>{props.message}</h1>;
+  }
+  
+  const element = <MyComponent message="Hello, world!" />;
+  console.log(element.props); // { message: "Hello, world!" }
+
+
+  childrean :
+it is string if you have not pass anything it will be undefine
+*/
+  
+http://localhost:5173/
