@@ -6,14 +6,14 @@
 
 // this is tree structure of react element
 // this is how react see eevry create element
- const reactele = {
-    type: "a",  tags
-    props:{    
-        href: "https://google",
-        target:"blank"
-    },
-    childrean :"click me"
-}
+//  const reactele = {
+//     type: "a",  tags
+//     props:{    
+//         href: "https://google",
+//         target:"blank"
+//     },
+//     childrean :"click me"
+// }
 // or const element = react.createelement("h1",null,"hello")
 // customreact (reactele, mainContainer)
 
@@ -59,4 +59,40 @@ function MyComponent(props) {
 it is string if you have not pass anything it will be undefine
 */
   
+
 http://localhost:5173/
+
+// Creating element with fun 
+/*const ReactEle = React.createElement(
+ "a",
+  {href: "https://github.com/samyak1409",target:"_blank"},
+  "click me" // children 
+  )
+
+ReactDOM.createRoot(document.getElementById('root')).render // render is method
+(
+  ReactEle
+)*/
+
+
+/*how to inject variables: {}
+function App() {
+    const name = " neha"
+    return(<p>hello {name}</p>)*/
+
+//{under this we can only put value not if else as if we want we can do under funcation}
+
+
+// under return we canot use if else also for object for because the react objet is for accessing component
+// not for code
+// const name = "neha"
+// const ReactEle = React.createElement(
+//   "a",
+//    {href: "https://github.com/samyak1409",target:"_blank"},
+//    "click me", // children 
+//    //name
+//    )
+// ReactDOM.createRoot(document.getElementById('root')).render // render is method
+// (
+//   ReactEle
+// )

@@ -16,7 +16,7 @@ function MyApp(){
   childrean :"click me"
 }*/
 
-const reactEle = React.createElement(
+/*const ReactEle = React.createElement(
  "a",
   {href: "https://github.com/samyak1409",target:"_blank"},
   "click me" // children 
@@ -24,5 +24,18 @@ const reactEle = React.createElement(
 
 ReactDOM.createRoot(document.getElementById('root')).render // render is method
 (
-  reactEle
+  ReactEle
+)*/
+
+
+const name = "neha"
+const ReactEle = React.createElement(
+  "a",
+   {href: "https://github.com/samyak1409",target:"_blank"},
+   "click me", // children 
+   name
+   )
+ReactDOM.createRoot(document.getElementById('root')).render // render is method
+(
+  ReactEle
 )

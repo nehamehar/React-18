@@ -1,0 +1,55 @@
+/* hooks:
+UI updation controlled by React through hooks we can update
+
+hooks comes up with : import { useState } from 'react'
+
+like usestate under function 
+*/
+
+/*USESTATE:
+it is hooks in react use to add state on function
+StAte is just data like num,text tht we can change and it will see on screen
+
+How to Use useState?
+const [state, setState] = useState(initialValue);
+// name - setname
+state: The variable that holds the current value.
+setState: A function to update the state.
+initialValue: The starting value of the state.
+*/ 
+
+
+
+/*CHANGING VALUE ON BROWSER USING HOOKS:
+
+function App() {
+  let [value, setvalue] = useState(9)  //VALUE -VARIABLE , SETVALUE-SET variable,usestate for random 
+
+  const addvalue = () => {             // we write fun under fun not outer
+    console.log("Here is the value: ", value)
+    value = value +1
+    setvalue(value) // to make changes on value what changes is also writen
+  }
+
+    const removeValue=() => {
+    console.log("Here is the removed value: ", value)
+    value = value - 1
+    setvalue(value)
+
+  }
+  return (
+    <>
+    <h1>App</h1>
+    <h2>total count {value}</h2>
+    <br/>
+    <button onClick={addvalue} >adding value</button>
+    <br/>
+    <br/>
+    <button onClick ={removeValue}>removing value</button>
+    </>
+  )
+}
+
+export default App
+*/
+

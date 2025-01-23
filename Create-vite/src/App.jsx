@@ -1,0 +1,38 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+//let usertotal = 15
+function App() {
+  let [value, setvalue] = useState(9)
+
+  const addvalue = () => {
+    console.log("Here is the added value: ", value)
+    value = value +1
+    setvalue(value)
+  }
+
+  const removeValue=() => {
+    if (removeValue <= 0, value--)(
+      console.log("Here is the removed value: ", value )
+    )
+    else console.error("number is greater than zero");
+    
+    //value = value - 1
+    setvalue(value )
+
+  }
+  return (
+    <>
+    <h1>App</h1>
+    <h2>total count {value}</h2>
+    <br/>
+    <button onClick={addvalue} >adding value</button>
+    <br/>
+    <br/>
+    <button onClick ={removeValue}>removing value</button>
+    </>
+  )
+}
+
+export default App
