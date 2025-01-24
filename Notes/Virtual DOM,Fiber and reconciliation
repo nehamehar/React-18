@@ -1,0 +1,30 @@
+/*
+**Virtual DOM:
+
+In simple words, the Virtual DOM in React is like a copy of your webpage that React keeps in memory.
+
+Instead of making changes directly to the real webpage (which can be slow), React first updates the virtual copy. Then, it compares the virtual version with the real one, and only changes the parts that are different.
+
+This makes your app faster because React doesn’t have to update the entire webpage—just the bits that need to change.
+
+
+
+
+
+CreateROOT: 
+-it create a DOM like structure like brouwser have
+- it is method
+-it compare with brouswer dom and only update which is updated in UI
+- we can track in virtual dom in tree like structure and the value which is changes only get replaced
+
+
+** reconcilation : it is like algothrim of vd
+- algorthim which decide which one has to change 
+- it compare one tree(vd) with another tree(browser) and we comesup with actual tree (browser) also react tree which comes up CreateROOT
+-
+
+** fiber:
+- pause and comeback later 
+- assign prority to diff type of works
+- resue previous work
+*/

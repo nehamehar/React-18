@@ -96,3 +96,14 @@ function App() {
 // (
 //   ReactEle
 // )
+//
+
+
+// RENDER:
+// render in React means displaying or showing something on the screen. When you write a React component, you define what you want to show (like text, images, or buttons), and React "renders" that content to the browser.
+
+// For example:
+
+// In a class component, you use a render() method to tell React what to show.
+// In a functional component, you just return what you want to show directly.
+// So, whenever you change something (like the text or button), React will "re-render" to update the screen with the new content.
