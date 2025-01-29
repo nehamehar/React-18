@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import "tailwindcss";
 
 function MyApp(){
   return (<h1>hi my name</h1>)
