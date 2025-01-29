@@ -1,2 +1,24 @@
 tailwand framework of css how to use css better
 
+We use tailwind classes which is
+className=
+it works as class in html 
+- for giving property we can add under className=" color, backgrd color, text color , padding"
+
+
+bg-inherit  
+background-color: inherit;
+bg-current
+background-color: currentColor;
+bg-transparent
+background-color: transparent;
+bg-black
+background-color: var(--color-black); /* #000 */
+bg-white
+background-color: var(--color-white); /* #fff */
+bg-red-50
+background-color: var(--color-red-50); /* oklch(0.971 0.013 17.38) */
+bg-red-100
+background-color: var(--color-red-100); /* oklch(0.936 0.032 17.717) */
+
+
