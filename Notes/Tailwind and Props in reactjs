@@ -5,7 +5,7 @@ className=
 it works as class in html 
 - for giving property we can add under className=" color, backgrd color, text color , padding"
 
-
+this is how we put colors in tilwind
 bg-inherit  
 background-color: inherit;
 bg-current
@@ -21,4 +21,24 @@ background-color: var(--color-red-50); /* oklch(0.971 0.013 17.38) */
 bg-red-100
 background-color: var(--color-red-100); /* oklch(0.936 0.032 17.717) */
 
+paddding
+p-9
+width 
+w-33
+height
+h-90
+text black
+
+
+for image:--
+https://www.pexels.com/
+
+for content code of image--
+https://www.devui.in/
+
+props:
+
+- props make componet re usable
+- like making any frame or like login page and make it as component to reuse
+- 
 
