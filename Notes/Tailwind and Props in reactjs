@@ -45,4 +45,130 @@ function Card(props) - under props vales are
 console.log("props",props)
 
 
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Card from './assets/project/loginpage' //importing fun from the location
+
+
+
+function App() {
+  const [count, setCount] = useState(14)
+
+  return (
+    <>
+    <h1 className='bg-red-100'>hello</h1>
+    <Card/>  /* calling fun frm login page */
+    <Card/>   /*for calling that feature again */
+    </>
+  )
+}
+
+export default App
+
+- we can call function one more time to show the feture twice 
+- props are like object
+
+
+*******//what we are passing here will show on props
+
+function Card(props) {
+    console.log("props",props)
+
+********
+return (
+        <>
+        <h1 className='bg-red-100 top-p-10 top-px'>hello</h1>
+        <Card name="neha"/>  
+        <Card/>   //what we are passing here will show on props
+        </>
+      )
+    }
+    
+    export default App
+
+*********passing array value --- gives error for this we have to make object
+
+return (
+    <>
+    <h1 className='bg-red-100 top-p-10 top-px'>hello</h1>
+    <Card name = "neha"  myArr=[1,2,3]/>  
+    <Card/>   //what we are passing here will show on props
+    </>
+  )
+}
+
+export default App
+
+
+in (App.jsx)
+
+****make object for passing multiple value
+
+function App() {
+    const [count, setCount] = useState(14)
+    let myobj={
+        username: "neha",
+        age:24
+    }
+
+-then add object name {under this} to passing value
+return (
+    <>
+    <h1 className='bg-red-100 top-p-10 top-px'>hello</h1>
+    <Card name = "neha" new = {myobj} />  // with give another value 
+    <Card/>   //what we are passing here will show on props
+    </>
+  )
+}
+*******also we can pass array like this make one object of array then pass the value under the return fun{}
+let newarr=[1,2,3,4]
+
+
+*********for showing something on webpage on tailwind we can put that APP.jsx object initial-value
+under the code with {};also
+
+write value in 
+function Card(props) {
+    console.log(props.name)  //it will  show name value on console 
+
+    also
+
+
+function Card({name}) {
+    console.log(name) 
+
+
+
+****************if you want to add the name of object under your content code {writte in this}\
+*****************for mutiple passing value;
+
+function Card({name, btnText}) {
+    console.log(name)
+
+
+    CONCLUTION
+
+like first pass props on app.jsx then it goes on main code fun props then add value{}
+1) 
+add the changing value in app.jsx return -
+<Card name = "neha" new = {myobj} ;
+
+
+2) to handle that as the app.jsx fun calling value goes under 
+function Card({name, btnText}) {
+    console.log(name)
+main code fun properties then only you can add the value on code to show on web
+
+********for default value mean if we did not pass any props under app.jsx 
+
+default value we write on 
+
+main code props
+
+app.jsx---<Card   btnText = "Click to go"/> 
+main code----function Card({name = "samyak", btnText}) {
+    console.log(name)
+
 
