@@ -36,9 +36,13 @@ https://www.pexels.com/
 for content code of image--
 https://www.devui.in/
 
-props:
+props: 
 
 - props make componet re usable
 - like making any frame or like login page and make it as component to reuse
-- 
+- we write props under 
+function Card(props) - under props vales are
+console.log("props",props)
+
+
 
