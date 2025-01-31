@@ -1,4 +1,4 @@
-tailwand framework of css how to use css better
+/*/*tailwand framework of css how to use css better
 
 We use tailwind classes which is
 className=
@@ -14,14 +14,14 @@ bg-transparent
 background-color: transparent;
 bg-black
 background-color: var(--color-black); /* #000 */
-bg-white
+/*bg-white
 background-color: var(--color-white); /* #fff */
-bg-red-50
+/*bg-red-50
 background-color: var(--color-red-50); /* oklch(0.971 0.013 17.38) */
-bg-red-100
+/*bg-red-100
 background-color: var(--color-red-100); /* oklch(0.936 0.032 17.717) */
 
-paddding
+/*paddding
 p-9
 width 
 w-33
@@ -61,7 +61,7 @@ function App() {
     <h1 className='bg-red-100'>hello</h1>
     <Card/>  /* calling fun frm login page */
     <Card/>   /*for calling that feature again */
-    </>
+/*    </>
   )
 }
 
@@ -71,9 +71,9 @@ export default App
 - props are like object
 
 
-*******//what we are passing here will show on props
+*******  what we are passing here will show on props*\
 
-function Card(props) {
+/*function Card(props) {
     console.log("props",props)
 
 ********
@@ -169,6 +169,6 @@ main code props
 
 app.jsx---<Card   btnText = "Click to go"/> 
 main code----function Card({name = "samyak", btnText}) {
-    console.log(name)
+    console.log(name) */
 
 

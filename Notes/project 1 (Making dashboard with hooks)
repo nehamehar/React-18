@@ -9,7 +9,9 @@ function App() {
   const addvalue = () => {
     console.log("Here is the added value: ", value)
     value = value +1
+    //prevalue = prevalue+1 for previous or last value 
     setvalue(value)
+    //setvalue(prevalue)
   }
 
   const removeValue=() => {
