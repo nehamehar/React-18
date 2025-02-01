@@ -1,4 +1,5 @@
 // react element 
+// in react we use jsx for creating UI that'why react use classname so that there is no confusion btw js and react as js use class which is keyword
 // const element = <h1>HI <h1/>
 // 
 // jsx means javascript+html
