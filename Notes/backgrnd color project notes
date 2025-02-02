@@ -2,3 +2,12 @@ w-full -- width full
 h-screen -- height screen full
 duration-500 -- taking time to getting done things
 
+outline-none
+px-4
+py-5
+border-color
+rounded-3xl
+hover:bg-slate-700
+inset-y-3 inset-x-3 -- for vertical bar
+
+onClick={() => setcolor("red")} --callback fun as it has an event call onclick else it is arrow fun
