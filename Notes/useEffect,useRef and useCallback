@@ -1,0 +1,6 @@
+cd "project 2 generating pass"
+
+callback(fn,dependencies)
+
+Math.random -- use to generate the random password 
+.length = use to retrieve the length of array string anything in js 
