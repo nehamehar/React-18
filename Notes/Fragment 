@@ -1,0 +1,26 @@
+/*
+<> <fragment>
+</> </fragment>
+--it use to wrap the code so that jsx do not give any error
+--we can write many element with frag
+if we are returning something under component 
+we have to use <h> <p> tags so two options are there
+if we donot use fragmnet will give error 
+so we can use div or frangment
+
+but div make one container which we do nokt want 
+in that case we can use fragment
+
+console.log(fragment)
+symbol(react.fragment)
+
+
+
+
+
+
+
+
+
+
+*/

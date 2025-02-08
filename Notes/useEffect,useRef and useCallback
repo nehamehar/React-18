@@ -1,6 +1,205 @@
-cd "project 2 generating pass"
+/*  these all are hooks usestate usecallback useref 
+
+
+1. useState Hook
+
+usestate(first value, f)
+usestate(state , setvalue)
+
+--usestate use to add the state to functional that show on browser
+--Set an initial state value.
+---Update the state value when needed.
+----useState is for adding state to functional components.
+---It allows you to create state variables, update them, and 
+trigger re-renders when the state changes. This makes it an essential hook for building interactive and dynamic React applications.
+--- set can shows the updated number on browser
+Eg:
+const [state, setState] = useState(initialValue);
+--State is initial value 
+---setState is use to update the state value
+----initial Value will give update value
+
+
+
+***
+Resetting State
+You can also reset the state by calling the setState function with the initial value again:
+
+javascript
+Copy
+setCount(0); // Resets count to 0
+
+
+******
+FOR MULTIPLE STATE:
+setCount((prevCount) => prevCount + 1)  CALLBACK FUN
+setCount((prevCount) => prevCount + 1) 
+-- it will update the number with total set of lines if 2 the first value is 2 then 4 then 6
+- if you want to update the value with multiple times
+
+FOR ONE :
+setCount(COUNT + 1)  
+
+
+
+----------------------------------------
+2. useEffect Hook
+---The useEffect hook in React is used to perform side effects in functional
+like-
+Fetching data from an API
+Subscribing to events (like a WebSocket)
+Manually updating the DOM (e.g., changing the title of the page)
+Setting up a timer or interval
+Cleaning up resources when the component unmounts or before the effect runs again (like clearing a timer)
+
+--useeffect use for sideeffects
+--this is how vwevwrite useeefect
+useeffect(() => {
+  
+},[] )
+
+3. useRef hook:
+-- it return object and the object has one property .current which we can access.
+--it does not rerender 
+
+
+
+
 
 callback(fn,dependencies)
 
 Math.random -- use to generate the random password 
 .length = use to retrieve the length of array string anything in js 
+
+--space from right side 
+mr- size
+
+--input in react is
+
+<input 
+          type="text"   first text
+          value={password}   second what kind like pass or somethinfg
+          className='w-full px-3 py-1 outline-none'
+          placeholder=""  // can write anything
+          readonly // no one can change anything 
+          />  
+
+***putting range effect *****
+<input type="range" id="volume" name="volume" min="0" max="100" value="50"></input>
+type="range": Specifies that this is a range input (a slider).
+id="volume": The unique identifier for the input element, useful for linking to a label.
+name="volume": The name of the input, typically used when submitting the form data.
+
+
+
+*******on
+onChange={(e) => {setlength(e.target.value)}}
+passing event then event can call setlength property then it will work
+
+******for check box
+
+<input type="checkbox" id="numberinput" class="mr-2" defaultChecked={numbersAllowed} 
+            onChange={() => 
+            {numbersnotAllowed((prev) => !prev)}}/>
+            <label className="text-orange-500">Numbers</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//code 
+import { useState, useCallback, useEffect, useRef} from 'react'
+import './App.css'
+
+function App() {
+  const [letters, setletters] = useState(6); //usestate for counting the letters in box
+  const [numbersAllowed, setnumbersAllowed] = useState(false); // this for numbers lettersallowed is random case we are taking for letters or numbers true and false 
+  const [charAllowed, setcharAllowed] = useState(false); // this is for char
+  const [pass, setpass] = useState("") // for input pass
+
+
+  // useref hook
+  const passwordRef = useRef(null)
+  
+  const generatorPass = useCallback(() => {
+    let pass =""
+    let data = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"  //data for pass
+    if (numbersAllowed) data += "0123456789"
+    if (charAllowed) data += "!@#$%^&*()-_=+|{ };:/?"
+    
+    // generating random numbers with loop
+    for (let i = 1; i <= length; i++)  //i vallue is less than eqaul to array k highest element ,then i++
+    { 
+      let char = Math.floor(Math.random()*data.length + 1)   // Math.random is use to generate the random pass, data.length + 1=> data k length m +1 hota rhega 0 n ayega
+      // //for taking character in index value with upper operation: (charat(name where you want character in index)
+      pass += data.charAt(char)
+    }
+    // for pass value read
+    setpass(pass)
+  }, [letters, numbersAllowed, charAllowed, setpass]);
+
+  
+  const copyPasswordtoclipbpard = useCallback(() => {
+    window.navigator.clipboard.writeText(pass)
+  },
+[pass])
+  //useeffect
+  useEffect (() => {generatorPass()}, [letters, numbersAllowed, charAllowed,generatorPass]);
+  
+
+  
+  return ( 
+    <div className='px-3 py-5 ml-48 mr-48 text-2xl'> 
+      <h1 className="py-3 text-center text-white bg-gray-700 border-2 rounded-full">Generating Passwords</h1>
+      <div className='justify-center px-48 border-4 py-36 rounded-3xl mt-28 bg-slate-700'>
+        <div className='flex overflow-hidden rounded-lg shad'>
+          <input 
+          type="text"  //react input
+          value={pass}  // call from state 
+          className='w-full px-3 py-1 outline-none'
+          placeholder='password'
+          readOnly
+          ref={passwordRef} />
+          <button 
+          onClick={copyPasswordtoclipbpard}
+          className='mr-1 bg-black border-white rounded-md text-violet-50'>COPY</button>
+        </div>
+        <div className='flex text-lg gap-x-2'>
+          <div className='flex items-center gap-x-1'>
+            <input
+            type='range'
+            min={6}
+            max={80}
+            value={letters} //value will linked with length
+            className='cursor-pointer' //as without classname we canot use cursor pointer
+            onChange={(e) => {setletters(e.target.value)}}
+            ></input>
+            <label className='text-orange-500 rounded-full mt-9 mb-7'>Range:{letters}</label>
+          </div>
+          <div className='flex items-center text-lg text-orange-500 ml-28 gap-x-1'>
+            <input type="checkbox" id="numberinput" defaultChecked={numbersAllowed} 
+            onChange={() => 
+            {setnumbersAllowed((prev) => !prev)}}/>
+            <label htmlFor='numbersInput'>Number</label></div>
+          <div className='flex items-center text-lg text-orange-500 ml-28 base gap-x-1'>
+            <input type="checkbox" id="characterInput" defaultChecked={charAllowed} 
+            onChange={() => {
+              setcharAllowed((prev) => !prev)}}/>
+            <label htmlFor='characterInput'>Character</label></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+export default App
+*\
+

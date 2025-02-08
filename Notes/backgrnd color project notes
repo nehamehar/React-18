@@ -1,4 +1,4 @@
-w-full -- width full
+/* w-full -- width full
 h-screen -- height screen full
 duration-500 -- taking time to getting done things
 
@@ -10,4 +10,4 @@ rounded-3xl
 hover:bg-slate-700
 inset-y-3 inset-x-3 -- for vertical bar
 
-onClick={() => setcolor("red")} --callback fun as it has an event call onclick else it is arrow fun
+onClick={() => setcolor("red")} --callback fun as it has an event call onclick else it is arrow fun *\

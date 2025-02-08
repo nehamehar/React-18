@@ -27,4 +27,9 @@ CreateROOT:
 - pause and comeback later 
 - assign prority to diff type of works
 - resue previous work thanks
+
+
+-Props:
+{} use to pass the value under componnent 
+props are mutable
 */
