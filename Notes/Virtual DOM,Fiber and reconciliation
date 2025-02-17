@@ -8,7 +8,13 @@ Instead of making changes directly to the real webpage (which can be slow), Reac
 This makes your app faster because React doesn’t have to update the entire webpage—just the bits that need to change.
 
 
-
+tailwind 
+--it is a framework
+-- make quicker to write and maintain the code of app
+--you don't need to write css
+--good sttyling
+--app development
+--complex web app
 
 
 CreateROOT: 
