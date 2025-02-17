@@ -1,0 +1,8 @@
+/* 
+-We use ternarry operator for the conditional statement
+
+(count === 10? 'over' : "not")
+{(count === 10 && 'over')
+}
+like this we can apply to our component also we can use if else
+*/

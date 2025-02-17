@@ -1,0 +1,15 @@
+The Geolocation API (navigator.geolocation.watchPosition) is used to get the current location of the person. 
+
+Leaflet Map:
+
+MapContainer from react-leaflet creates the map. We center the map on the current location using the center prop
+
+
+Pinbar Emoji as Marker:
+
+We use L.divIcon to create a custom Leaflet marker that displays the 📍 pinbar emoji.
+You can adjust the iconSize and iconAnchor values to fit the emoji properly on the map.
+
+Popup:
+
+A Popup is displayed with the person's current latitude and longitude whenever the pin (emoji) is clicked.

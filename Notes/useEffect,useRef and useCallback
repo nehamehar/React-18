@@ -54,19 +54,46 @@ Cleaning up resources when the component unmounts or before the effect runs agai
 
 --useeffect use for sideeffects
 --this is how vwevwrite useeefect
+
 useeffect(() => {
   
-},[] )
+},[state variable] ) 
+
+--[] - dependency array (we put variable in it which we want to call when the fun run)
+- we pass call back fun also an empty array
+1. if we want to run only one time empty the []
+2. if not if that with variable you want to track with under []
+
+
 
 3. useRef hook:
--- it return object and the object has one property .current which we can access.
---it does not rerender 
+-- useref use as access in Dom element we can make one fun of useref and put 
+(ref={varibale name of that fun}) then it will use as access in DOM just like get element (variablename.current.props)
+-- it return object as (current:undefine) if we do not pass 
+---if we pass anything
+like const myRef = useRef("hi")
+here hi is current value , current is key hi is value
+--it does not rerender or it do not update the value like useSate
+-- it remeber the value that we have passed the value 
 
 
 
-
-
+4. useCallback:
+--use useCallback is to prevent a component from re-rendering unless its props have changed
 callback(fn,dependencies)
+
+When to Use:
+
+You’d typically use useCallback when you need to pass a function to a child component that is optimized with React.memo or when that function is part of a dependency list for useEffect, useMemo, or other hooks. This ensures that the child doesn't unnecessarily re-render and that the effect only runs when truly needed.
+
+imp
+Functions are recreated on every render by default. This means if you pass a function as a prop to a child component, the child component will re-render even if the function's logic hasn’t changed. useCallback ensures that the function is only recreated when its dependencies change, preventing unnecessary re-renders.
+
+5. useMemo
+--The useMemo Hook only runs when one of its dependencies update.
+--The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+
+
 
 Math.random -- use to generate the random password 
 .length = use to retrieve the length of array string anything in js 

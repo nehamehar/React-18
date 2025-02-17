@@ -107,3 +107,19 @@
 // Bs itne m project hojaega poora
 
 // 12:09 PM✓✓✓✓
+
+[10:31 pm, 16/02/2025] Tcs Senior: Han Badia
+[10:32 pm, 16/02/2025] Tcs Senior: The project is to track the live location of some agents when the agent data is refreshing constantly every 1 min
+[10:38 pm, 16/02/2025] Neha Mehar: To un agent ko track krne k liye kuch hona chaiye na? Map m?
+[10:40 pm, 16/02/2025] Tcs Senior: Pins aaege na map pe
+[10:40 pm, 16/02/2025] Tcs Senior: Konsa agent kidhar h
+[10:44 pm, 16/02/2025] Tcs Senior: {lat:8373838,long:474738,agentName:Naman}
+Ye object ka array lele ab isme try kr multiple agents ko map pe show krna hai
+[10:45 pm, 16/02/2025] Tcs Senior: How we know ki idhar udhar jaega to kese pta chalega wo aise ki ye data humko har 1 min m api se aaega
+[10:46 pm, 16/02/2025] Tcs Senior: To every minute page refresh krna hoga
+[10:46 pm, 16/02/2025] Tcs Senior: With the api call
+[10:46 pm, 16/02/2025] Tcs Senior: Practice on it you can explain ki aisa kuchh kia tha tcs k project me
+[10:47 pm, 16/02/2025] Tcs Senior: Or uska code ahre nhi kr skti
+
+
+AIzaSyCRMAoxlSjaqckB_EPTwv61TGasAsbdpls

@@ -1,0 +1,8 @@
+/* 
+-passing anything under one tag that we call childrean
+<button>
+hello --child 
+also we csn write 
+childrean ="hello"
+</button>
+*/
