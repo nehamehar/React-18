@@ -1,0 +1,19 @@
+/*
+Hooks are just like functions we can also make under the code for eg
+- state is variable
+-usestate is fun
+-setstate is fun
+
+
+# we can make custom hoooks by own:
+- if you are making hooks always remeber that they return js not jsx so file name must be js
+
+for eg: custom hook
+
+function hello (){
+    return [variable1, variable]
+}
+
+- the naming starts with "use" also hooks take optional argument but what we are making do not take opetional
+we have to give info in place of argument name (variable) 
+*/
