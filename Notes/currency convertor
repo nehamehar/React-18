@@ -6,7 +6,7 @@ Hooks are just like functions we can also make under the code for eg
 
 
 # we can make custom hoooks by own:
-- if you are making hooks always remeber that they return js not jsx so file name must be js
+- if you are making hooks always remeber that they return js not jsx so file name (new created file)must be js
 
 for eg: custom hook
 
@@ -14,6 +14,63 @@ function hello (){
     return [variable1, variable]
 }
 
-- the naming starts with "use" also hooks take optional argument but what we are making do not take opetional
+- the naming starts with "use" also hooks take optional argument but what we are making do not take opetional argument
 we have to give info in place of argument name (variable) 
+this is hook:
+function hello (optional1){
+    return [variable1, variable]
+}
+
+
+----now i want to call API we can call through fetch but we want the api call when we call hooks calls 
+as one useeffect is there through which we can fetch api data and no need to make another function
+(()={}) === we call this call back 
+useEffect(()={})
+
+(()={}) == callback fun [] = dependencies
+
+(()={}, [])  ==callback fun with dependencies
+
+
+function hello (optional1){
+    useEffect(() ={
+    fetch()
+    },[])
+
+    return [variable1, variable]
+}
+
+line1
+-----feching API data is in  json which is always render and give string to make it json
+we have to handle react quryy bydefsult handle it
+
+----- for chaining under fetch we can use many then
+ .then(callback)
+.then(()=> {})
+{} - we removed as if we write this we have to aplply return statement
+
+
+----for first chain always response comes
+.then((res)=> res.json)  -- we are converting the response into json as the response was always in string
+
+
+function hello (optional1){
+    useEffect(() ={
+    fetch()
+    .then((res)=> res.json())
+    },[])
+
+}
+
+------now for holding data as line 1 we put then again as this time we know the response is in json'
+
+function hello (optional1){
+    useEffect(() ={
+    fetch()
+    .then((res)=> res.json())
+    .then((res)=> )
+    },[])
+
+}
+
 */

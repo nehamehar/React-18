@@ -59,7 +59,8 @@ useeffect(() => {
   
 },[state variable] ) 
 
---[] - dependency array (we put variable in it which we want to call when the fun run)
+--[] - dependency array (we put variable in it which we want to call when the varibale we put inside depenedcies have some changes like last value to current value or rerender (only when it call the varibale when there is some chanes occur))
+The dependencies array in useEffect contains variables, usually state or props, that the effect depends on. React will check the values inside the array and re-run the effect only if any of the values change between renders.
 - we pass call back fun also an empty array
 1. if we want to run only one time empty the []
 2. if not if that with variable you want to track with under []
