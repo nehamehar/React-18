@@ -5,6 +5,8 @@ Hooks are just like functions we can also make under the code for eg
 -setstate is fun
 
 
+PHASE1
+------------------------------------------------------------------------------------------
 # we can make custom hoooks by own:
 - if you are making hooks always remeber that they return js not jsx so file name (new created file)must be js
 
@@ -22,7 +24,7 @@ function hello (optional1){
 }
 
 
-----now i want to call API we can call through fetch but we want the api call when we call hooks calls 
+~~~~~now i want to call API we can call through fetch but we want the api call when we call hooks calls 
 as one useeffect is there through which we can fetch api data and no need to make another function
 (()={}) === we call this call back 
 useEffect(()={})
@@ -41,16 +43,16 @@ function hello (optional1){
 }
 
 line1
------feching API data is in  json which is always render and give string to make it json
+~~~~~~feching API data is in  json which is always render and give string to make it json
 we have to handle react quryy bydefsult handle it
 
------ for chaining under fetch we can use many then
+~~~~~~for chaining under fetch we can use many then
  .then(callback)
 .then(()=> {})
 {} - we removed as if we write this we have to aplply return statement
 
 
-----for first chain always response comes
+~~~~~for first chain always response comes
 .then((res)=> res.json)  -- we are converting the response into json as the response was always in string
 
 
@@ -62,15 +64,64 @@ function hello (optional1){
 
 }
 
-------now for holding data as line 1 we put then again as this time we know the response is in json'
+~~~~~~now for holding data as line 1 we put then again as this time we know the response is in json'
 
 function hello (optional1){
     useEffect(() ={
     fetch()
     .then((res)=> res.json())
-    .then((res)=> )
+    .then((res)=> // we rae holding data here with regular variable if we do hold data with random variable if would not change in UI)
     },[])
 
 }
 
+
+~~~~~~~so for holdoing data in variable with chaanages on UI we use STATE EFFECT
+function hello (optional1){
+    const [data,setdata] = usedata({})  //{} because data is fetching here but if case no fecthing is done atleast crash would not happen because of {} empty object
+    useEffect(() ={
+    fetch()
+    .then((res)=> res.json())
+    .then((res)=> state hooks(res[currency])  // as we have diff currencies for that we only take one var CURRENCY
+    },[cureency])  // as we want the initial and last value changes due to rerender
+
+}
+
+
+~~~~~for calling the function in return startement 
+1) we can use return [data,setdata]  but in this case currency would not access 
+2) we can call only data
+
+then export fun
+---------------------------------------------------------------------------
+
+
+PHASE2 
+----------------------------------------------------------------------------
+* how to make component reusable:
+input.jsx
+
+~~~~~~we take one input fun which is taking 2 thing labele and className like what thigs you want in your box 
+
+
+function Inputbox({
+    label,
+    amount,
+    onAmountChange,  //method
+    onCurrencyChange,
+    currencyOption [] for not crash
+    classname ="",  here className is notjing so we put that empty 
+})
+return 
+
+
+~~~~~~~after return html and css there
+MAP ()
+~~~~~~~why we use Map instead for loop we can use MAP instad for as if we don't want to change existing array just want to convert each item new one with jsx component in react, for loop make modiify in existing does not make new one
+map(): Best used when you need to transform an array into another array of the same length, such as applying a function to each element or converting each item into JSX components in React.
+ so if i wnat to not change the array but iterate and make it with jsx i use map
+
+
+ WHENEVR WE LOOP IN JSX WE HAVE TO PASS KEY WHICH IS ASSIGN THE OBJECT UUNDER ARRAY 
+ ALSO WITH MAP() KEY USE
 */
