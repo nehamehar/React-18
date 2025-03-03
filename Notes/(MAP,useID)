@@ -122,6 +122,30 @@ map(): Best used when you need to transform an array into another array of the s
  so if i wnat to not change the array but iterate and make it with jsx i use map
 
 
- WHENEVR WE LOOP IN JSX WE HAVE TO PASS KEY WHICH IS ASSIGN THE OBJECT UUNDER ARRAY 
+ WHENEVER WE LOOP IN JSX WE HAVE TO PASS KEY WHICH IS ASSIGN THE OBJECT UUNDER ARRAY 
  ALSO WITH MAP() KEY USE
+
+ ------------------------------------------------------------
+ *useID hooks:
+ useId is a React Hook for generating unique IDs that can be passed to accessibility attributes
+ The useId hook in React is used to generate unique IDs that can be assigned to elements in a component. This is particularly useful for accessibility purposes, such as associating <label> elements with form inputs, as well as when you need a unique ID for elements rendered multiple times in a component, like in dynamic lists or modals.
+
+
+ Conclusion:
+useId is useful for generating unique, stable IDs for elements in React components, especially for accessibility and dynamic UI rendering.
+It is consistent across renders and ensures that the generated IDs are safe during SSR and CSR, making it a key tool for avoiding issues with ID collisions in React applications.
+
+* <label> htmlfor use with <input> id:
+1) eg 
+name is lable and you are putting email instead of name it shows error in box <input> that;s why we link input with label
+so that the filling box must be clear to user
+2) value of id is same to the value of htmlfor
+3) for disabilities if we clink on name it automatically clickable on name box it must be usefull for user who is disable as the box is tiny
+
+
+DO NOT USE USEID TO GENERATE THE KEYS
+
+
+
+
 */
