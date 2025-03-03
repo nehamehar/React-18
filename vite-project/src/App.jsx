@@ -1,14 +1,33 @@
-import Code from "./code"
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  const name = " neha"
+  const [count, setCount] = useState(0)
+
   return (
     <>
-    <p>hello {name}</p>
-    <h1>Hello samyak | neha</h1> /*taking fun returning html rendoring in main.jsx(we can export only one element that's why we // or we can make one div under all thing*/
-    <Code/>  // function 
-    <p>samyak</p>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
