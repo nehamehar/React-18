@@ -9,4 +9,24 @@ ZUSTAND
 
 mostly work with Redux
 
-***
+***almost every project of react state menagement IF dealing with server or API***
+
+1) we have to create context first
+2) after context make we will export context
+3) context is like <div> <context>
+4) <context>
+<h1>   // now the component under context get access of global usercontext.
+<p1> 
+</context>
+THIS IS WE CAN SAY CONTEXT IS MAKE LIKE THIS / OR WE CAN SAY PROVIDER after the <>
+
+***PROVIDER***
+- after create Context we use to make provider with  it
+***HOW WE CAN MAKE PROVIDER***
+<context> -uper 
+component // these compo can access all the sate of context
+<context> --down 
+why provider -- coz it use to provide data
+
+
+
