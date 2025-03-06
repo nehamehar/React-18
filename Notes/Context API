@@ -29,4 +29,61 @@ component // these compo can access all the sate of context
 why provider -- coz it use to provide data
 
 
+**prop (children)use under (whatever you are getting data pass that we give it name childrean)
+
+const UserContextProvider = ({children}) => {
+    const [user,setUser]
+    return(  
+        <>  \\ here we wrap our context code and passing cmponnent
+        {Children}   
+        </>
+    )
+
+}
+
+HERE WRITING <context> will not work we have to access the value which is provider
+<context.provider> 
+
+** which value you want to access through provider
+const UserContextProvider = ({children}) => {
+    const [user,setUser]
+    return(  
+        <context.provider value = value {{user, setuser}} >  \\ here we wrap our context code and passing cmponnent
+        {Children}   
+        </context.provider>
+    )
+
+}
+whatever data you want to pass you can pass under value also can pass object
+through value {{user, setuser}} property we can put component to access 
+
+const UserContextProvider = ({children}) => {
+    const [user,setUser]
+    return(  
+        <context.provider value = value {{user, setuser}} >  \\ here we wrap our context code and passing cmponnent
+        {Children}   
+        </context.provider>
+    )
+
+}
+
+**    const [user,setUser] = React.useState(null)
+const UserContextProvider = ({children}) => {
+    const [user,setUser] = React.useState(null)
+    const [user,setUser]
+    return(  
+        <context.provider value = value {{user, setuser}} >  \\ here we wrap our context code and passing cmponnent
+        {Children}   
+        </context.provider>
+    )
+
+}
+
+-- here react.usetsate means we are importng usestate from here directly
+
+NOW STORES DONE (FILE)BUT FOR ACCESSING THOSE FILE WE USE  1) TO IMPORT file of provider one IN APP.JSX OR MAIN.JSX
+BY:<contextprovider> PUTTING THIS
+
+**FOR FETCHING DATA FROM USERCONTEXT FILE USECONTEXT() USE**
+
 
