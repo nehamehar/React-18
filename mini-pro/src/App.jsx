@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import UserContextProvider from './assets/context/UserContextProvider'
+import Login from './components/login'
+import Profile from './components/Profile'
+import UserContextProvider from './context/UserContextProvider'
+
 function App() {
+  
 
   return (
     <UserContextProvider>
-      <h1>Helo MY Name</h1>
+      <h1>React with Chai and share is important</h1>
+      <Login />
+      <Profile />
     </UserContextProvider>
   )
 }
