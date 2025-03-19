@@ -1,0 +1,23 @@
+ <input
+                type="checkbox"  
+                value=""
+                className="sr-only peer"
+                onChange={onChangeBtn}
+                checked ={themeMode === "dark"}
+            />
+
+
+// these are checkbox in which we have checked then it will give dark 
+
+
+const onChangeBtn = (e) => {
+    const darkModeStatus = e.currentTarget.checked
+    if (darkModeStatus) {
+        darkTheme
+    } else {
+        lightTheme()
+    }
+}
+
+//then we will take dark mode status if true thme will covert into darkmode else light
+

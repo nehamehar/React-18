@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { ThemeProvider } from './contexts/theme'
+import ThemeBtn from './components/Themebtn'
+import Card from './components/Card'
 
 function App() {
   const [themeMode, setthemeMode] = useState("light")
@@ -28,9 +30,8 @@ function App() {
     <div className="flex flex-wrap items-center min-h-screen">
                 <div className="w-full">
                     <div className="flex justify-end w-full max-w-sm mx-auto mb-4">
-                    <Themebtn/> 
+                    <ThemeBtn/>
                     </div>
-
                     <div className="w-full max-w-sm mx-auto">
                     <Card/>
                     </div>
