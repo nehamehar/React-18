@@ -1,0 +1,17 @@
+/* localStorage.setItem("lastname", "Smith");
+localStorage.getItem("lastname");
+
+.getItem and setItem 2 items are there in local storage
+here when we are set the value we have to provdide key and value and when we are only calling the itme we have to call key the value will automatically come
+
+
+IMP : local storage is on browser which is cleint side renderring 
+
+means first we give html content to server cleint server cleint give request to cleint side so that it visible on browser which is cleint side rendering
+
+______________________________
+****why we use local storage
+The localStorage object stores data with no expiration date.
+The data is not deleted when the browser is closed, and are available for future sessions.
+we can directly access local storage when we are in react
+*/
