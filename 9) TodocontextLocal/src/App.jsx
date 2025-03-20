@@ -52,7 +52,7 @@ function App() {
     <TodoProvider value={{todos, addTodo, updatedTodo, deletedTodo, toggleCompleted}}>    {/* whenever we use provider we have to mention what provider will give like value and all */}
     <div className="bg-[#000000] min-h-screen py-10">
                 <div className="w-full max-w-2xl px-4 py-3 mx-auto rounded-lg shadow-md text-sky-800">
-                    <h1 className="mt-2 mb-8 text-2xl italic font-bold text-center underline">TO-DO Box</h1>
+                    <h1 className="mt-2 mb-8 text-4xl italic font-bold text-center underline">TO-DO Box</h1>
                     <div className="mb-4">
                         {/* Todo form goes here */} 
                         <TodoForm/>
