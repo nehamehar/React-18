@@ -14,4 +14,41 @@ ______________________________
 The localStorage object stores data with no expiration date.
 The data is not deleted when the browser is closed, and are available for future sessions.
 we can directly access local storage when we are in react
-*/
+
+
+
+****{id: Date.now(), ...todo}
+The expression {id: Date.now(), ...todo} is using JavaScript's object spread syntax to create a new object. Let's break it down:
+
+1. Date.now():
+Date.now() returns the current timestamp in milliseconds since January 1, 1970 (the Unix epoch).
+So, id: Date.now() creates an id field in the new object and assigns it the current timestamp as its value.
+2. ...todo:
+The spread syntax ...todo is used to spread the properties of the todo object into the new object.
+If todo is an object (e.g., { text: "Buy groceries", completed: false }), the properties of todo will be copied into the new object.
+Putting it all together:
+{id: Date.now(), ...todo} creates a new object with:
+An id property with the current timestamp.
+All the properties of the todo object are copied into the new object.
+
+
+
+const todo = { text: "Buy groceries", completed: false };
+
+const newTodo = { id: Date.now(), ...todo };
+
+console.log(newTodo);
+
+
+
+{
+  id: 1679026541234,  // This is the current timestamp
+  text: "Buy groceries",
+  completed: false
+}
+
+
+In this case, the new object will have an id field with the timestamp, and the properties from the todo object (text and completed) will be added to it.
+
+Why use this?
+This pattern is common when you want to add some additional information (like an ID) to an existing object while keeping all the original properties. It’s often used in situations where you are working with data structures like lists of "to-do" items and need to assign a unique ID to each one. */

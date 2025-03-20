@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { useTodo } from "../context"
 
 function TodoItem({ todo }) {
-    const [isTodoEditable, setIsTodoEditable] = useState(false)
-    const [todoMsg, setTodoMsg] = useState(todo.todo)
-    const{updatedTodo, deletedTodo, toggleCompleted} = useTodo()
+    const [isTodoEditable, setIsTodoEditable] = useState(false)  //todo is not edititable that's why we did it flase
+    const [todoMsg, setTodoMsg] = useState(todo.todo) //what msg under todo it will only give through usestate (object todo ka todo access)
+    const{updatedTodo, deletedTodo, toggleCompleted} = useTodo()  //we are taking fun here
 
     const editTodo =() => {
         updatedTodo(todo.id, {...todo, todo: todoMsg})
@@ -17,7 +17,7 @@ function TodoItem({ todo }) {
     return (
         <div
             className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
-                todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
+                todo.completed ? "bg-[#c6e9a7]" : "bg-[#D8BFD8]"
             }`}
         >
             <input
@@ -54,7 +54,7 @@ function TodoItem({ todo }) {
                 className="inline-flex items-center justify-center w-8 h-8 text-sm border rounded-lg border-black/10 bg-gray-50 hover:bg-gray-100 shrink-0"
                 onClick={() => deletedTodo(todo.id)}
             >
-                ❌
+             ❌
             </button>
         </div>
     );
