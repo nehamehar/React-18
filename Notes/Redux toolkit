@@ -1,0 +1,23 @@
+/* React also works with class based insead function but we mostly use function based
+
+IMP -- FOR BROWSER WORKING REACT-DOM LIBRARY USE
+and for mobile working REACT=NAVTIVE USE 
+ALSO REACT
+
+redux: in react is react-redux, as the redux is core library
+
+like if we rae using react for web dev we use react-dom 
+like if we are using redux we have to use redux-react 
+redux works with js app not react it can work witg veu too
+
+
+*****Redux toolkit : have all manufestured thing already setup
+store : like one page in which all component we give
+reducer: it update in store like object 
+useSelector: when we have to select the value from store
+useDispatch: when we have to send the value from store
+
+
+
+*/
+
