@@ -17,6 +17,13 @@ reducer: it update in store like object
 useSelector: when we have to select the value from store
 useDispatch: when we have to send the value from store
 
+store.js:
+
+1) for making store we need to configure the store through import configurestore from reduxtoolkit
+
+every var takes only object like:
+const store =({}){ object}
+2) make reducers
 
 
 */
