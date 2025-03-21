@@ -51,13 +51,13 @@ function App() {
   return (
     <TodoProvider value={{todos, addTodo, updatedTodo, deletedTodo, toggleCompleted}}>    {/* whenever we use provider we have to mention what provider will give like value and all */}
     <div className="bg-[#000000] min-h-screen py-10">
-                <div className="w-full max-w-2xl px-4 py-3 mx-auto text-red-900 rounded-lg shadow-md">
-                    <h1 className="mt-2 mb-8 text-4xl font-bold text-center">TO-DO App</h1>
+                <div className="w-full max-w-2xl px-4 py-3 mx-auto text-white rounded-lg shadow-md">
+                    <h1 className="mt-2 mb-8 text-4xl font-bold text-center text-red-900 ">TO-DO App</h1>
                     <div className="mb-4">
                         {/* Todo form goes here */} 
                         <TodoForm/>
                     </div>
-                    <div className="flex flex-wrap gap-y-3d flex-direction: columns-1">
+                    <div className="flex-wrap space-y-6 flex-direction: row-1 ">
                         {/*Loop and Add TodoItem here */}
                         {todos.map((todo) => (
                           <div key={todo.id}
