@@ -1,8 +1,6 @@
 
 
 {
-  "homepage": "https://nehamehar.github.io/1) Interactive Background Color Changer",
-
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "gh-pages": "^6.3.0",
@@ -33,6 +31,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nehamehar/React-18/issues"
-  },
-  "homepage": "https://github.com/nehamehar/React-18#readme"
+  }
 }
